@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Homework_2_10</string>
+    <string name="welcome">Добро пожаловать в приложение по учёту автомобилей!</string>
+    <string name="enter">Войти</string>
+    <string name="name">Разработано: Милованцева Ирина РИБО-01-22 вариант 16(1)</string>
+    <string name="text_parameters">Введите параметры своего автомобиля:</string>
+    <string name="save">Сохранить</string>
+    <string name="incorrect_value">Вы ввели некорректное значение</string>
+    <string name="insert_error">При добавлении произошла ошибка</string>
+    <string name="insert_success">Запись успешно сохранена</string>
+</resources>
