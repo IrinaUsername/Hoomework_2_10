@@ -8,4 +8,5 @@
     <string name="incorrect_value">Вы ввели некорректное значение</string>
     <string name="insert_error">При добавлении произошла ошибка</string>
     <string name="insert_success">Запись успешно сохранена</string>
+    <string name="home">Назад</string>
 </resources>

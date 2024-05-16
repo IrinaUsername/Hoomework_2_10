@@ -16,6 +16,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class ApplicationActivity extends AppCompatActivity implements View.OnClickListener {
     private EditText editTextBrand, editTextNumber, editTextYear;
@@ -53,7 +55,10 @@ public class ApplicationActivity extends AppCompatActivity implements View.OnCli
             String brand = editTextBrand.getText().toString();
             String number = editTextNumber.getText().toString();
             String year = editTextYear.getText().toString() ;
-            if(!brand.isEmpty() && !number.isEmpty() && !year.isEmpty() ){
+            String pattern = "[A-Za-z]\\d{3}[A-Za-z]{2}";
+            Pattern p = Pattern.compile(pattern);
+            Matcher m = p.matcher(number);
+            if(!brand.isEmpty() && !number.isEmpty() && !year.isEmpty() && m.matches() && 1900<Integer.parseInt(year) && Integer.parseInt(year)<2025){
                 boolean result = dbManager.saveCarToDatabase(new Car(brand,number,Integer.parseInt(year)));
                 if(result){
                     Toast.makeText(this, R.string.insert_success, Toast.LENGTH_LONG).show();
